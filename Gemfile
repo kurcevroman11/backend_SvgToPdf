@@ -11,6 +11,8 @@ gem "puma", ">= 5.0"
 gem 'prawn', '~> 2.5'
 gem 'prawn-svg', '~> 0.36'
 
+gem 'dotenv-rails'
+
 # Сериализация
 gem 'blueprinter', '~> 1.0'
 
