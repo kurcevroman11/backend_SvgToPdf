@@ -1,0 +1,35 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/pdfs":
+    post:
+      summary: Генерация PDF из SVG
+      tags:
+      - PDF
+      parameters: []
+      responses:
+        '201':
+          description: PDF успешно создан
+        '400':
+          description: Неверные параметры
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                svg:
+                  type: string
+                  format: binary
+                  description: SVG файл
+                watermark:
+                  type: string
+                  description: Текст водяного знака
+              required:
+              - svg
+        required: true
+servers:
+- url: http://localhost:3000

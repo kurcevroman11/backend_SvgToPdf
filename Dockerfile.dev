@@ -1,0 +1,23 @@
+FROM ruby:3.4.5
+
+WORKDIR /rails
+
+# Установим зависимости для Rails + SQLite + NodeJS (для asset pipeline)
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y build-essential git libyaml-dev pkg-config sqlite3 nodejs && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+
+# Bundler
+RUN gem install bundler
+
+# Установка гемов
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
+# Копируем проект
+COPY . .
+
+EXPOSE 3000
+
+# Запуск в dev-режиме
+CMD ["bash", "-c", "bundle exec rails db:prepare && bundle exec rails s -b 0.0.0.0 -p 3000"]
