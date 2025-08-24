@@ -32,4 +32,4 @@ paths:
               - svg
         required: true
 servers:
-- url: http://localhost:3000
+- url: http://31.129.100.165:3000
