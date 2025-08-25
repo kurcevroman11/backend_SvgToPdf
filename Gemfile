@@ -13,6 +13,13 @@ gem "prawn-svg", "~> 0.36"
 
 gem "dotenv-rails"
 
+# Swagger UI
+gem "rswag-ui", "~> 3.0.0.pre"
+# Swagger API генератор
+gem "rswag-api", "~> 3.0.0.pre"
+# Specs для генерации swagger.yaml из RSpec
+gem "rswag-specs", "~> 3.0.0.pre"
+
 # Сериализация
 gem "blueprinter", "~> 1.0"
 
