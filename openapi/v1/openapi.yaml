@@ -31,5 +31,4 @@ paths:
               required:
               - svg
         required: true
-servers:
-- url: http://31.129.100.165:3000
+
