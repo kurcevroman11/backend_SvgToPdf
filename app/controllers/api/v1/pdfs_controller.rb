@@ -3,7 +3,7 @@ class Api::V1::PdfsController < ApplicationController
 
     def create
         svg = params.require(:svg) # ActionDispatch::Http::UploadedFile или текст
-        watermark = params[:watermark].presence || 'Watermark'
+        watermark = params[:watermark].presence || "Watermark"
 
         # Генерация PDF
         pdf_io = GeneratePdfFromSvg.call(svg_io: svg, watermark: watermark)
@@ -15,13 +15,13 @@ class Api::V1::PdfsController < ApplicationController
         doc.source_svg.attach(
             io: svg_io,
             filename: infer_svg_filename(svg),
-            content_type: 'image/svg+xml'
+            content_type: "image/svg+xml"
         )
 
         doc.file.attach(
             io: pdf_io,
             filename: "generated_#{SecureRandom.hex(4)}.pdf",
-            content_type: 'application/pdf'
+            content_type: "application/pdf"
         )
 
         render json: PdfDocumentBlueprint.render(doc, view: :with_url), status: :created
@@ -46,5 +46,5 @@ class Api::V1::PdfsController < ApplicationController
         else
             "uploaded_#{SecureRandom.hex(4)}.svg"
         end
-    end  
+    end
 end

@@ -52,4 +52,4 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 end
 
-Rails.application.routes.default_url_options[:host] = 'http://www.example.com'
+Rails.application.routes.default_url_options[:host] = "http://www.example.com"

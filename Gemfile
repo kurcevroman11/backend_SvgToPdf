@@ -8,13 +8,13 @@ gem "sqlite3", ">= 2.1"
 gem "puma", ">= 5.0"
 
 # PDF рендеринг
-gem 'prawn', '~> 2.5'
-gem 'prawn-svg', '~> 0.36'
+gem "prawn", "~> 2.5"
+gem "prawn-svg", "~> 0.36"
 
-gem 'dotenv-rails'
+gem "dotenv-rails"
 
 # Сериализация
-gem 'blueprinter', '~> 1.0'
+gem "blueprinter", "~> 1.0"
 
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -56,15 +56,15 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem 'rspec-rails', '~> 6.0'
-  gem 'pdf-reader', '~> 2.11'
+  gem "rspec-rails", "~> 6.0"
+  gem "pdf-reader", "~> 2.11"
 
-  gem 'rack-cors'
+  gem "rack-cors"
 
   # Swagger UI
-  gem 'rswag-ui', '~> 3.0.0.pre'
+  gem "rswag-ui", "~> 3.0.0.pre"
   # Swagger API генератор
-  gem 'rswag-api', '~> 3.0.0.pre'
+  gem "rswag-api", "~> 3.0.0.pre"
   # Specs для генерации swagger.yaml из RSpec
-  gem 'rswag-specs', '~> 3.0.0.pre'
+  gem "rswag-specs", "~> 3.0.0.pre"
 end

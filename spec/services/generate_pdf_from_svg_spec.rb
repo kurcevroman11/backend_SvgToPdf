@@ -15,7 +15,7 @@ RSpec.describe GeneratePdfFromSvg do
         io = described_class.call(svg_io: StringIO.new(svg), watermark: 'Watermark Z')
 
 
-        Tempfile.create(['result', '.pdf']) do |f|
+        Tempfile.create([ 'result', '.pdf' ]) do |f|
             f.binmode
             f.write(io.read)
             f.rewind

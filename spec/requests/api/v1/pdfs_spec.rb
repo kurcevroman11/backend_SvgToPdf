@@ -15,7 +15,7 @@ RSpec.describe 'POST /api/v1/pdfs', type: :request do
 
 
     it 'создаёт PDF и возвращает сериализованный ответ с URL' do
-        file = Tempfile.new(['sample', '.svg'])
+        file = Tempfile.new([ 'sample', '.svg' ])
         file.write(svg_body)
         file.rewind
 
