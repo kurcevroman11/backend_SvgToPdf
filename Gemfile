@@ -21,7 +21,7 @@ gem "rswag-api", "~> 3.0.0.pre"
 gem "rswag-specs", "~> 3.0.0.pre"
 
 # Сериализация
-gem "blueprinter", "~> 1.0"
+gem "blueprinter", "~> 1.2"
 
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
